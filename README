@@ -1,0 +1,7 @@
+Example command: 
+
+./bam2fastq test.ccs.bam 0.99 filtered2.fastq
+
+Note:
+
+You should add the directory with the executable and library files to the relevant paths, DYLD_LIBRARY_PATH, PATH and LD_LIBRARY_PATH.
