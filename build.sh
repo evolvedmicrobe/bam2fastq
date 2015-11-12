@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -rf build; mkdir build
-
+mkdir lib
 
 # Check for the platform first
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -60,7 +60,7 @@ cd build
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 		cp ../config_ubuntu ./config
 		cp $MONO_ROOT/lib/libMonoPosixHelper.so ./
-        mkbundle --keeptemp --static  --deps --config-dir /nothing --config config -o ccscheck ccscheck.exe Bio.BWA.dll Bio.Core.dll Bio.Desktop.dll Bio.Platform.Helpers.dll     
+        mkbundle --keeptemp --static  --deps --config-dir /nothing --config config -o bam2fastq bam2fastq.exe Bio.Core.dll Bio.Desktop.dll Bio.Platform.Helpers.dll     
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 		cp ../config_mac ./config
 		cp $MONO_ROOT/lib/libMonoPosixHelper.dylib ./
